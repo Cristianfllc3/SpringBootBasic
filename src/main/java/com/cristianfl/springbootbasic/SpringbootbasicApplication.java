@@ -1,6 +1,10 @@
 package com.cristianfl.springbootbasic;
 
+import com.cristianfl.springbootbasic.data.entity.Guest;
+import com.cristianfl.springbootbasic.data.entity.Reservation;
 import com.cristianfl.springbootbasic.data.entity.Room;
+import com.cristianfl.springbootbasic.data.repository.GuestRepository;
+import com.cristianfl.springbootbasic.data.repository.ReservationRepository;
 import com.cristianfl.springbootbasic.data.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -27,4 +31,28 @@ public class SpringbootbasicApplication {
             return this.roomRepository.findAll();
         }
     }
+    @RestController
+    @RequestMapping("/guest")
+    public class GuestController{
+        @Autowired
+        private GuestRepository guestRepository;
+
+        @GetMapping
+        public Iterable<Guest> getGuest(){
+            return this.guestRepository.findAll();
+        }
+    }
+
+    @RestController
+    @RequestMapping("/reservations")
+    public class ReservationtController{
+        @Autowired
+        private ReservationRepository reservationRepository;
+
+        @GetMapping
+        public Iterable<Reservation> getReservation(){
+            return this.reservationRepository.findAll();
+        }
+    }
+
 }
