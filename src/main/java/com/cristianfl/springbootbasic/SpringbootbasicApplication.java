@@ -20,7 +20,10 @@ public class SpringbootbasicApplication {
         SpringApplication.run(SpringbootbasicApplication.class, args);
     }
 
-    @RestController
+
+
+    //basic STRUCTURE FOR CONTROLLERS
+    /*@RestController
     @RequestMapping("/rooms")
     public class RoomController{
         @Autowired
@@ -53,6 +56,6 @@ public class SpringbootbasicApplication {
         public Iterable<Reservation> getReservation(){
             return this.reservationRepository.findAll();
         }
-    }
+    }*/
 
 }

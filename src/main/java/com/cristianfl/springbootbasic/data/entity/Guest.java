@@ -1,27 +1,33 @@
 package com.cristianfl.springbootbasic.data.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="GUEST")
 public class Guest {
     @Id
     @Column(name="GUEST_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long guestId;
     @Column(name="FIRST_NAME")
-    private String guestFirstName;
+    private String firstName;
     @Column(name="LAST_NAME")
-    private String guestLastName;
+    private String lastName;
     @Column(name="EMAIL_ADDRESS")
-    private String guestEmailAddress;
+    private String emailAddress;
     @Column(name="ADDRESS")
-    private String guestAddres;
+    private String address;
     @Column(name="COUNTRY")
-    private String guestCountry;
+    private String country;
     @Column(name="STATE")
-    private String guestState;
+    private String state;
     @Column(name="PHONE_NUMBER")
-    private String guestPhoneNumber;
+    private String phoneNumber;
 
     public long getGuestId() {
         return guestId;
@@ -31,59 +37,59 @@ public class Guest {
         this.guestId = guestId;
     }
 
-    public String getGuestFirstName() {
-        return guestFirstName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setGuestFirstName(String guestFirstName) {
-        this.guestFirstName = guestFirstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getGuestLastName() {
-        return guestLastName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setGuestLastName(String guestLastName) {
-        this.guestLastName = guestLastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getGuestEmailAddress() {
-        return guestEmailAddress;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setGuestEmailAddress(String guestEmailAddress) {
-        this.guestEmailAddress = guestEmailAddress;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
-    public String getGuestAddres() {
-        return guestAddres;
+    public String getAddress() {
+        return address;
     }
 
-    public void setGuestAddres(String guestAddres) {
-        this.guestAddres = guestAddres;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getGuestCountry() {
-        return guestCountry;
+    public String getCountry() {
+        return country;
     }
 
-    public void setGuestCountry(String guestCountry) {
-        this.guestCountry = guestCountry;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
-    public String getGuestState() {
-        return guestState;
+    public String getState() {
+        return state;
     }
 
-    public void setGuestState(String guestState) {
-        this.guestState = guestState;
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public String getGuestPhoneNumber() {
-        return guestPhoneNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setGuestPhoneNumber(String guestPhoneNumber) {
-        this.guestPhoneNumber = guestPhoneNumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
